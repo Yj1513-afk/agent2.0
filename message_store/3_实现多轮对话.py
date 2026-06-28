@@ -59,6 +59,7 @@ class Chat:
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}")
         ])
+        print(self.ChatPromptTemplate)
         self.parser = StrOutputParser()
         self.chain = self.ChatPromptTemplate | self.model | self.parser
 
