@@ -46,6 +46,7 @@ if __name__ == '__main__':
     print(f"=== 查询 Q: '{user_query}' ===")
     print("\n【普通相似度检索 results】")
     results = chroma_db.similarity_search_with_relevance_scores(user_query, k=3)
+    print(results)
 
     for i, (doc, score) in enumerate(results):
         print(f"排名{i + 1}: 相似度={score:.4f} | 内容: {doc.page_content[:40]}...")

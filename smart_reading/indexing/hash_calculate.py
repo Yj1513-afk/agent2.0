@@ -13,3 +13,4 @@ class HashCalculate:
             for chunk in iter(lambda: f.read(4096), b""):#iter(functools.partial(f.read, 4096), b"")等价
                 hash_md5.update(chunk)
         return hash_md5.hexdigest()
+
