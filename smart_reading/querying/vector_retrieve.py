@@ -23,7 +23,7 @@ def recall_with_scores(
 
     try:
         results = vectorstore.similarity_search_with_relevance_scores(query, k=k)
-
+        print(f"向量检索结果：{results}")
         docs = []
         scores = []
         for doc, score in results:

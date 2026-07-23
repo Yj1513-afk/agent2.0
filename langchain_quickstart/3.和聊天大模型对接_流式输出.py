@@ -10,7 +10,7 @@ chat_history = [
 ]
 
 res = llm.stream(input=chat_history)
-
+print(type(res))
 print(res)
 for chunk in res:
     print(chunk.content,end="",flush=True)
